@@ -1,5 +1,5 @@
 <h2>Coder Form</h2>
-<form (ngSubmit)=newCoder()>
+<form (ngSubmit)=newCoder() #myform="ngForm">
     <div>
         <label for="name">First Name</label>
         <input id="firstName" required [(ngModel)]="model.firstName" name="firstName">
@@ -12,5 +12,6 @@
         <label for="salary">Salary</label>
         <input type="number" id="salary" [(ngModel)]="model.salary" name="salary">
     </div>
+    <div *ngIf="myform.submitted">Form was submitted</div>
     <button>Submit</button>
 </form>
