@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../user.model'
 
 @Component({
@@ -7,11 +7,16 @@ import { User } from '../user.model'
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  @Input() name: string;
+  @Input() user: User;
+  @Output() liked: EventEmitter<User>;
 
-  constructor() { }
+  constructor() { this.liked = new EventEmitter(); }
 
-  ngOnInit(): void {
+  ngOnInit() { }
+
+  plusOne() {
+    this.user.likes += 1;
+    this.liked.emit(this.user); // emette evento liked ovvero user, vedo user modificato
   }
 
 }

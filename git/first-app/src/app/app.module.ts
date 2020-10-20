@@ -6,6 +6,8 @@ import { HelloComponent } from './hello/hello.component';
 import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users/users.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { CodersComponent } from './coders/coders.component';
+import { CoderComponent } from './coder/coder.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { AddItemComponent } from './add-item/add-item.component';
     HelloComponent,
     UserComponent,
     UsersComponent,
-    AddItemComponent
+    AddItemComponent,
+    CodersComponent,
+    CoderComponent
   ],
   imports: [
     BrowserModule

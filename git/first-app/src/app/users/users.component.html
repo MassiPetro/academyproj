@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let name of names">
-        <app-user [name]="name"></app-user> <!-- [name] proprietà della classe UsersComponent -->
+    <li *ngFor="let user of users">
+        <app-user [user]="user" (liked)="moreLikes($event)"></app-user>  <!-- [user] proprietà della classe UserComponent -->
     </li>
 </ul>
