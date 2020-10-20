@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Coder } from '../coder.model';
 
 
@@ -9,11 +9,16 @@ import { Coder } from '../coder.model';
 })
 export class CoderComponent implements OnInit {
   @Input() coder: Coder;
+  @Output() increased: EventEmitter<Coder>;
   
-  constructor() { }
+  constructor() { this.increased = new EventEmitter(); }
 
   ngOnInit() { }
 
+  increaseSalary() {
+    this.coder.salary += 100;
+    this.increased.emit(this.coder);
+  }
   
 
 }

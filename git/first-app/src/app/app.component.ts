@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Coder } from './coder.model';
+
+import { User } from './user.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
+
+  addUser(user: User) {
+    console.log(user);
+  }
+
+  addCoder(coder: Coder) {
+    console.log(coder);
+  }
+
 }

@@ -1,0 +1,16 @@
+<h2>Coder Form</h2>
+<form (ngSubmit)=newCoder()>
+    <div>
+        <label for="name">First Name</label>
+        <input id="firstName" required [(ngModel)]="model.firstName" name="firstName">
+    </div>
+    <div>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" [(ngModel)]="model.lastName" name="lastName">
+    </div>
+    <div>
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" [(ngModel)]="model.salary" name="salary">
+    </div>
+    <button>Submit</button>
+</form>

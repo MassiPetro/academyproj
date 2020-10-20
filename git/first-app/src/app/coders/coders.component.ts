@@ -11,9 +11,13 @@ export class CodersComponent implements OnInit {
 
   constructor() {
     this.coders = [new Coder('Mario', 'Rossi', 2000), new Coder('Luca', 'Bianchi', 3000), new Coder('Matteo', 'Verdi', 4000)];
-   }
+  }
 
   ngOnInit(): void {
+  }
+
+  moreMoney(coder: Coder) {
+    console.log(`Salary for ${coder.firstName} ${coder.lastName} is ${coder.salary}`);
   }
 
 }
