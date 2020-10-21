@@ -17,6 +17,16 @@ import { CoderRformComponent } from './coder-rform/coder-rform.component';
 import { FirstPipe } from './first.pipe';
 import { SortPipe } from './sort.pipe';
 import { PipExComponent } from './pip-ex/pip-ex.component';
+import { UsersServiceComponent } from './users-service/users-service.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { RouterModule, Routes } from '@angular/router';
+import { Routing1Component } from './routing1/routing1.component';
+import { Routing2Component } from './routing2/routing2.component';
+
+const appRoutes: Routes = [
+  { path: 'one', component: Routing1Component },
+  { path: 'two', component: Routing2Component } 
+];
 
 @NgModule({
   declarations: [
@@ -33,12 +43,17 @@ import { PipExComponent } from './pip-ex/pip-ex.component';
     CoderRformComponent,
     FirstPipe,
     SortPipe,
-    PipExComponent
+    PipExComponent,
+    UsersServiceComponent,
+    AddUserComponent,
+    Routing1Component,
+    Routing2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
