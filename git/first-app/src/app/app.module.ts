@@ -14,6 +14,9 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { CoderFormComponent } from './coder-form/coder-form.component';
 import { UserRformComponent } from './user-rform/user-rform.component';
 import { CoderRformComponent } from './coder-rform/coder-rform.component';
+import { FirstPipe } from './first.pipe';
+import { SortPipe } from './sort.pipe';
+import { PipExComponent } from './pip-ex/pip-ex.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { CoderRformComponent } from './coder-rform/coder-rform.component';
     UserFormComponent,
     CoderFormComponent,
     UserRformComponent,
-    CoderRformComponent
+    CoderRformComponent,
+    FirstPipe,
+    SortPipe,
+    PipExComponent
   ],
   imports: [
     BrowserModule,
